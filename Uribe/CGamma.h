@@ -7,5 +7,6 @@ private:
 public:
     CGamma();
     ~CGamma();
+    void dibujar() override;
 };
 

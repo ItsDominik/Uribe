@@ -2,15 +2,20 @@
 
 CAlfa::CAlfa()
 {
-    dibujo.push_back("      _.---._      ");
-    dibujo.push_back("    .'       '.");
-    dibujo.push_back("_.-~===========~-._");
-    dibujo.push_back("(_________________)");
-    dibujo.push_back("     \\_______/     ");
-    larga = 3;
-    x = 1;
+    x = 0;
+    l = 20;
+    a = 5;
 }
 
 CAlfa::~CAlfa()
 {
+}
+
+void CAlfa::dibujar()
+{
+    Console::SetCursorPosition(x, y); cout << "      _.---._      ";
+    Console::SetCursorPosition(x, y+1); cout << "    .'       '.    ";
+    Console::SetCursorPosition(x, y+2); cout << "_.-~===========~-._";
+    Console::SetCursorPosition(x, y+3); cout << "(_________________)";
+    Console::SetCursorPosition(x, y+4); cout << "     \\_______/    ";
 }

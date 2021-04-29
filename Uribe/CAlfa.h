@@ -7,5 +7,6 @@ private:
 public:
 	CAlfa();
 	~CAlfa();
+	void dibujar() override;
 };
 

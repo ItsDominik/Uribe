@@ -5,14 +5,14 @@
 class CArrOvni
 {
 private:
-	vector<COvni*>vec;
+	vector<COvni*>arr;
 	int a, b;
 public:
 	CArrOvni();
 	~CArrOvni();
 	void agregar();
-	void ejecutar();
+	void ejecutar(int MAXH);
 	int tamanio();
-	bool colision(Rectangle rec);
+	/*bool colision(Rectangle rec);*/
 };
 

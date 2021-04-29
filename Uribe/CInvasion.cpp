@@ -9,11 +9,11 @@ CInvasion::~CInvasion()
 {
 }
 
-void CInvasion::juego()
+void CInvasion::juego(int MAXH)
 {
 	while (vec->tamanio()<20)
 	{
-		vec->ejecutar();
+		vec->ejecutar(MAXH);
 		if (kbhit() && toupper(getch()) == 'A')
 		{
 			vec->agregar();

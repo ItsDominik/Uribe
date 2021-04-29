@@ -12,9 +12,9 @@ COvni::~COvni()
 
 void COvni::borrar()
 {
-	for (int i = 0; i < dibujo.size(); i++)
+	for (int i = 0; i < l; i++)
 	{
-		for (int j = 0; j < dibujo.at(i).length(); j++)
+		for (int j = 0; j < a; j++)
 		{
 			Console::SetCursorPosition(x + j, y + i);
 			cout << " ";
@@ -22,21 +22,17 @@ void COvni::borrar()
 	}
 }
 
-bool COvni::mover(int MAXW, int MAXH)
+bool COvni::mover(int MAXH)
 {
-	if (y + dy < 0) return true;
+	if (y + dy + a> MAXH) return true;
 	y += dy;
 	return false;
 }
 
 void COvni::dibujar()
 {
-	for (int i = 0; i < dibujo.size(); i++)
-	{
-		Console::SetCursorPosition(x, y + i);
-		cout << dibujo.at(i);
-	}
 }
+
 
 //Rectangle COvni::getrec()
 //{

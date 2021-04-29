@@ -12,27 +12,27 @@ CArrOvni::~CArrOvni()
 
 void CArrOvni::agregar()
 {
-	vec.push_back(new CAlfa());
+	arr.push_back(new CAlfa());
 	a++;
 	if (a % 2 == 0)
 	{
-		vec.push_back(new CBeta());
+		arr.push_back(new CBeta());
 		b++;
 		if (b % 2 == 0)
-			vec.push_back(new CGamma());
+			arr.push_back(new CGamma());
 	}
 }
 
-void CArrOvni::ejecutar()
+void CArrOvni::ejecutar(int MAXH)
 {
-	for (int i = 0; i < vec.size(); i++)
+	for (int i = 0; i < arr.size(); i++)
 	{
-		vec.at(i)->borrar();
-		if (vec.at(i)->mover() == 0)
-			vec.at(i)->dibujar();
+		arr.at(i)->borrar();
+		if (arr.at(i)->mover(MAXH) == 0)
+			arr.at(i)->dibujar();
 		else
 		{
-			vec.erase(vec.begin() + i);
+			arr.erase(arr.begin() + i);
 			i--;
 		}
 	}
@@ -40,18 +40,18 @@ void CArrOvni::ejecutar()
 
 int CArrOvni::tamanio()
 {
-	return vec.size();
+	return arr.size();
 }
 
-bool CArrOvni::colision(Rectangle rec)
-{
-	for (int i = 0; i < vec.size(); i++)
-	{
-		if (vec.at(i)->colision(rec))
-		{
-			vec.erase(vec.begin() + i);
-			i--;
-			return false;
-		}
-	}
-}
+//bool CArrOvni::colision(Rectangle rec)
+//{
+//	for (int i = 0; i < arr.size(); i++)
+//	{
+//		if (arr.at(i)->colision(rec))
+//		{
+//			arr.erase(arr.begin() + i);
+//			i--;
+//			return false;
+//		}
+//	}
+//}

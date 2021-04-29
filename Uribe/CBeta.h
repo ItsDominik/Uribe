@@ -7,5 +7,6 @@ private:
 public:
     CBeta();
     ~CBeta();
+    void dibujar() override;
 };
 

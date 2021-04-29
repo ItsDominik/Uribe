@@ -8,6 +8,6 @@ private:
 public:
 	CInvasion();
 	~CInvasion();
-	void juego();
+	void juego(int MAXH);
 };
 
