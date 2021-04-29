@@ -2,7 +2,7 @@
 
 COvni::COvni()
 {
-	y = 3;
+	y = 0;
 	dy = 1;
 }
 
@@ -22,11 +22,11 @@ void COvni::borrar()
 	}
 }
 
-bool COvni::mover()
+bool COvni::mover(int MAXW, int MAXH)
 {
-	if (y + dy < 0 || y + dy + dibujo.size()>24) return 1;
+	if (y + dy < 0) return true;
 	y += dy;
-	return 0;
+	return false;
 }
 
 void COvni::dibujar()
@@ -38,12 +38,12 @@ void COvni::dibujar()
 	}
 }
 
-Rectangle COvni::getrec()
-{
-	return Rectangle(x,y,dibujo.at(larga).length(), dibujo.size());
-}
-
-bool COvni::colision(Rectangle rec)
-{
-	return getrec().IntersectsWith(rec);
-}
+//Rectangle COvni::getrec()
+//{
+//	return Rectangle(x,y,l, dibujo.size());
+//}
+//
+//bool COvni::colision(Rectangle rec)
+//{
+//	return getrec().IntersectsWith(rec);
+//}
