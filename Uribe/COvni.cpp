@@ -12,9 +12,9 @@ COvni::~COvni()
 
 void COvni::borrar()
 {
-	for (int i = 0; i < l; i++)
+	for (int i = 0; i < a; i++)
 	{
-		for (int j = 0; j < a; j++)
+		for (int j = 0; j < l; j++)
 		{
 			Console::SetCursorPosition(x + j, y + i);
 			cout << " ";
@@ -24,7 +24,7 @@ void COvni::borrar()
 
 bool COvni::mover(int MAXH)
 {
-	if (y + dy + a> MAXH) return true;
+	if (y + dy + a > MAXH) return true;
 	y += dy;
 	return false;
 }

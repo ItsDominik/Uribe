@@ -1,6 +1,6 @@
 #include "CAlfa.h"
 
-CAlfa::CAlfa()
+CAlfa::CAlfa() :COvni()
 {
     x = 0;
     l = 20;

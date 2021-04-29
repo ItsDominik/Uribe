@@ -1,6 +1,6 @@
 #include "CBeta.h"
 
-CBeta::CBeta()
+CBeta::CBeta():COvni()
 {
 	x = 30;
 	l = 11;
@@ -14,6 +14,6 @@ CBeta::~CBeta()
 void CBeta::dibujar()
 {
 	Console::SetCursorPosition(x, y); cout << "   .---.   ";
-	Console::SetCursorPosition(x, y); cout << " _/__~0_\\_";
-	Console::SetCursorPosition(x, y); cout << "(_________)";
+	Console::SetCursorPosition(x, y+1); cout << " _/__~0_\\_";
+	Console::SetCursorPosition(x, y+2); cout << "(_________)";
 }
